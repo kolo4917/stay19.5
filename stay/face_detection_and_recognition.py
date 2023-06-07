@@ -182,7 +182,7 @@ def compare_with_other_images(db_img_url, db_faces, db_labels, image_url, input_
 
     # Threshold for examine similarity
     cosine_similarity_threshold = 0.363
-    l2_similarity_threshold = 1.290
+    l2_similarity_threshold = 1.340
 
     for i in range(len(input_faces)):
         # Label to be granted

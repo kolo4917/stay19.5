@@ -18,7 +18,11 @@ from django.http import HttpResponse
 
 
 def main(request):
-    return render(request, 'common/main.html')
+    id = request.session.get('id')
+    nickname = request.session.get('nickname')
+    thumbnail_image = request.session.get('image')
+
+    return render(request, 'common/main.html', {'id': id, 'nickname': nickname, 'thumbnail_image': thumbnail_image})
 
 
 def login(request):
@@ -66,7 +70,7 @@ def getcode(request):
     request.session['nickname'] = nickname
     request.session['image'] = image
 
-    return redirect('info')
+    return redirect('main')
 
 def gallery(request):
     return render(request, 'gallery/gallery.html')
