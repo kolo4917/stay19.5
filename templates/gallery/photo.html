@@ -21,7 +21,7 @@
     {% for url_row in urls %}
     <div>
         {% for url in url_row %}
-        <img class="photo-image" src="{{ url }}" alt="Image">
+        <img class="photo-image" src="{{ url }}" alt="">
         {% empty %}
         <p>No image found.</p>
         {% endfor %}

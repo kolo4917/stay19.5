@@ -125,17 +125,12 @@ def upload_image(request):
 
             with connection.cursor() as cursor:
                 # 데이터 삽입 SQL 문 실행
-                print(1)
                 sql = "INSERT INTO real_final_stay2 (address, people_1, people_2, people_3, people_4, people_5, people_6) VALUES (%s, %s, %s, %s, %s, %s, %s)"
-                print(1)
                 data = (image_url, *[json.dumps(value) for value in people_values[:6]])
-                print(1)
                 cursor.execute(sql, data)
-                print(1)
                 #n 번째 adress 값 image_url, people_values[1]이 15개 배열
                 # 변경 사항 커밋
                 connection.commit()
-                print(1)
 
             id_num = get_id_num(image_url)[0]
             print(id_num)
@@ -181,29 +176,22 @@ def upload_image(request):
                     prople_5_number,
                     prople_6_number
                 ]
-                print(type(people_1_values))
-                print(type(prople_1_number))
 
                 if image_addresses:
-                    print(image_addresses)
                     image_addresses = image_addresses[0]  # 대괄호 제거
                 else :
                     image_addresses = image_url
-                print("DB Labels :", db_labels)
                 new_labels = compare_with_other_images(image_addresses, db_faces, db_labels, image_url, results, new_labels)
-                print("New Labels :", new_labels)
                 # DB 속 이미지 한 장 비교 완료
 
             # 새로 부여된 label 리스트 길이를 6으로 맞추기 (0으로)
             if(len(new_labels) < 6):
                 for i in range(6 - len(new_labels)):
                     new_labels.append(0)
-            print(new_labels)
             people_1_val_exists = bool(Stay_model.objects.filter(people_1_val__isnull=False))
             max_value = 0  # 변수 초기화
             if people_1_val_exists:
                 max_value = get_max_value_across_fields(Stay_model)
-                print(max_value)
 
             #레이블 넘겨주면 그걸 데이터베이스 안에다가 넣고 리스트 값이 -1이면 max value+1
             # 리스트 전부가져와서 현재 id의 val값에다가 값 넣고 -1일 경우 max_value+1해서 넣어주기
@@ -303,7 +291,6 @@ def ai_gallery(request):
                     value = getattr(stay, field_name)
                     if int(value) == k and int(value) not in k_list:  # k 값과 일치하는 경우
                         address_row.append(stay.address)
-                        print(k)
                         k_list.append(k)
                         print(face_value)
                         # k = 1 일경우 value 1,  리스트 값= f"people_i"
@@ -316,8 +303,6 @@ def ai_gallery(request):
     context = {
         'addresses': addresses,
     }
-    print(addresses)
-
     return render(request, 'gallery/ai_gallery.html', context)
 
 
@@ -335,8 +320,6 @@ def image_detail(request, image_id):
                 if int(value) == int(image_id):
                     urls.append((stay.address, image_id))
                     break
-    print('여기')
-    print(urls)
     context = {
         'urls': urls,
     }
