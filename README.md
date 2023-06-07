@@ -29,20 +29,27 @@ Stay19.5
         + **특정 인물과의 사진만 볼 수 있는 AI 갤러리 모드**
 
 
-## 화면 구성
-<img src="https://i.ibb.co/58yJpp8/Kakao-Talk-Photo-2023-06-07-13-52-31.png" alt="Kakao-Talk-Photo-2023-06-07-13-52-31" width="300px" height="200px">
+
 
 ## 사용자 이용 가이드
 1. '**로그인하기**' 버튼을 누르고 카카오톡 계정으로 로그인을 한다.
+
+
 [![image.png](https://i.postimg.cc/VkKj9Lx7/image.png)](https://postimg.cc/4Yh7sZNt) [![image.png](https://i.postimg.cc/vmpxX13v/image.png)](https://postimg.cc/5HSt2tcH)
 
 2. 사용 목적에 따라 화면 아래쪽에 있는 네비게이션바에서 기능을 이용한다.
+
+
 [![image.png](https://i.postimg.cc/VkKj9Lx7/image.png)](https://postimg.cc/4Yh7sZNt)
 
 3. '지도' 버튼을 통해 가까운 포토부스 위치를 확인할 수 있다.
+
+
 [![image.png](https://i.postimg.cc/cHS4rfFP/image.png)](https://postimg.cc/t1BHcnQz)
 
 4. '업로드' 버튼을 눌러 사진 속 QR코드로 사진 업로드를 시도한다.
+
+
 [![image.png](https://i.postimg.cc/7PXYZG0Q/image.png)](https://postimg.cc/c6gNDJDQ) [![image.png](https://i.postimg.cc/rFPV5Bh1/image.png)](https://postimg.cc/2VnNDKNy)
 
 >   * 밝기가 너무 밝으면 인식이 잘 안될 수 있습니다.
@@ -50,13 +57,23 @@ Stay19.5
 
 
 5. 업로드 완료 후, '갤러리' 버튼을 눌러 사진을 확인한다.
+
+
 [![image.png](https://i.postimg.cc/9FrVXxWr/image.png)](https://postimg.cc/PPs02Qvj)
 
+
 6. '갤러리' 속 'AI 갤러리' 버튼으로 AI 갤러리 모드를 사용할 수 있다.
+
+
 [![AI.png](https://i.postimg.cc/FzYqvBjv/AI.png)](https://postimg.cc/D4K5d5jp)
 
 7. 'MY' 버튼으로 개인 프로필 확인과 로그아웃을 할 수 있다.
+
+
 [![MY.png](https://i.postimg.cc/QdGPLSVL/MY.png)](https://postimg.cc/ppCkzfDk)
+
+
+
 
 ## Git Clone을 통한 웹사이트 접속
 
@@ -65,7 +82,7 @@ Stay19.5
 >   macOS의 경우
 >   python으로는 설치 진행이 안되므로, **python3**로 진행한다.
 1. python 설치
-* [Python] (https://www.python.org/downloads/, "Python Download")
+* [Python](https://www.python.org/downloads/, "Python Download")
 2. pip 확인
 ```
 $ pip
@@ -101,6 +118,8 @@ $ python manage.py runserver
 4. 위에 제시된 사용자 가이드를 따라 웹사이트를 이용한다.
 5. 종료 시, 터미널에서 Ctrl-C를 입력하여 사용을 종료한다.
 >   macOS의 경우, cmd-C를 입력한다.
+
+
 
 
 ## Stacks
