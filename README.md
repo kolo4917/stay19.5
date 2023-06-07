@@ -1,15 +1,21 @@
-# Project : Stay19.5<br>
+# Project : Stay19.5
+<br>
 
 
 ## 프로젝트 로고
+<br>
+
+
 <p align="center">
     <img src="https://i.ibb.co/TB3Skx0/Kakao-Talk-Photo-2023-06-07-13-52-46.png" alt="Kakao-Talk-Photo-2023-06-07-13-52-46" width="200px" height="200px">
-</p><br>
+</p>
+<br>
 
 
 ## 프로젝트 정보
 >   팀명 : Stay19.5
->   개발 기간 : 2023.03 ~ 2023.06<br>
+>   개발 기간 : 2023.03 ~ 2023.06
+<br>
 
 
 ## 팀원 및 역할 소개 :wave:
@@ -30,7 +36,8 @@
 #### :point_right: 사진 갤러리
 * **QR코드를 통한 사진 업로드**
 * **사용자별 갤러리 기능 제공**
-* **특정 인물과의 사진만 볼 수 있는 AI 갤러리 모드**<br>
+* **특정 인물과의 사진만 볼 수 있는 AI 갤러리 모드**
+* <br>
 
 
 ## 사용자 이용 가이드 :green_book:
@@ -77,7 +84,8 @@
 7. '**MY**' 버튼으로 개인 프로필 확인과 로그아웃을 할 수 있다.
 
 
-[![MY.png](https://i.postimg.cc/QdGPLSVL/MY.png)](https://postimg.cc/ppCkzfDk)<br>
+[![MY.png](https://i.postimg.cc/QdGPLSVL/MY.png)](https://postimg.cc/ppCkzfDk)
+<br>
 
 
 ## Git Clone을 통한 웹사이트 접속 :open_file_folder:
