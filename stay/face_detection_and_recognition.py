@@ -83,8 +83,6 @@ def get_valid_faces(faces, input_img):
                                                                                                 l2_similarity_threshold))
         id.append(i)
         valid_faces.append(faces[i])
-    print("\nThe number of detected Faces :", len(valid_faces))
-    print()
     return valid_faces
 
 
@@ -132,8 +130,6 @@ def detect_faces_in_img(input_img):
         # If no faces are detected, error notice is printed
         assert faces[1] is not None, "Cannot find a face in the input image"
 
-        print("[[[Faces]]]\n", faces)
-        print("\nfaces type :", type(faces))
         # Remove duplicated faces and just leave unique embeddings
         # valid_faces : The list holds unique face embeddings
         detected_valid_faces = get_valid_faces(faces[1], input_img)
@@ -163,9 +159,7 @@ def detect_faces_in_img(input_img):
 # 3. people_i_number    == db_labels
 # 4. image_url          == input_img
 # 5. results            == input_faces
-# 6. labels_and_faces   == labels_and_faces
-
-# labels_and_faces = [ [label, face_info], [label, face_info], [label, face_info], ... ]
+# 6. new_labels         == labels_and_faces
 
 def compare_with_other_images(db_img_url, db_faces, db_labels, image_url, input_faces, new_labels):
     # Read image through OpenCV Library (Img to Numpy Array)
