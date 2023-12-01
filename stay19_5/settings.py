@@ -21,7 +21,7 @@ STAY_APP_DIR = os.path.join(BASE_DIR, 'stay')
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-dgbc$wyi096qex(45x$$dhp93n$51giuky%42m5%z%**2_(7h1'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'default-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -40,10 +40,9 @@ INSTALLED_APPS = [
     'stay.apps.StayConfig',
 ]
 DEFAULT_FILE_STORAGE = 'storages.backends.gcloud.GoogleCloudStorage'
-GS_BUCKET_NAME = 'stay_img'
-GS_PROJECT_ID = '386709'
-GS_SERVICE_ACCOUNT_KEY_FILE = 'C:/Users/KOLO/stay19_5/stay-386709-797ebdd564f8.json'
-GS_CREDENTIALS = os.path.join(BASE_DIR, 'C:/Users/KOLO/stay19_5/stay-386709-797ebdd564f8.json')
+GS_BUCKET_NAME = os.environ.get('GS_BUCKET_NAME', 'default-bucket-name')
+GS_PROJECT_ID = os.environ.get('GS_PROJECT_ID', 'default-project-id')
+GS_SERVICE_ACCOUNT_KEY_FILE = os.environ.get('GS_SERVICE_ACCOUNT_KEY_FILE', 'path-to-your-service-account-key-file')
 
 
 MIDDLEWARE = [
@@ -82,11 +81,11 @@ WSGI_APPLICATION = 'stay19_5.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'stay_img',
-        'USER': 'root',
-        'PASSWORD': '0000',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': os.environ.get('DB_NAME', 'default-db-name'),
+        'USER': os.environ.get('DB_USER', 'default-user'),
+        'PASSWORD': os.environ.get('DB_PASSWORD', 'default-password'),
+        'HOST': os.environ.get('DB_HOST', 'localhost'),
+        'PORT': os.environ.get('DB_PORT', '3306'),
     }
 }
 
