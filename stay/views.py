@@ -43,7 +43,7 @@ def getcode(request):
     # REST API를 이용해 토큰 발급 받아옴 (카카오에게)
     requests.post('https://kauth.kakao.com/oauth/token')
     data = {'grant_type': "authorization_code",
-            'client_id': 'aa4f2cb7ffd0e8ced07032bfa9361f57',
+            'client_id': '####',
             'redirect_uri': 'http://127.0.0.1:8000/oauth/redirect',
             'code': code}
     headers = {'Content-type': 'application/x-www-form-urlencoded;charset=utf-8'}
